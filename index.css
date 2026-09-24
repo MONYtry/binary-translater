@@ -1,0 +1,121 @@
+
+body 
+{
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+
+    color: white;
+
+    background: radial-gradient(circle at 20% 20%, #28345c, transparent 40%), radial-gradient(circle at 80% 80%, #39235e, transparent 40%),#08090d;
+}
+
+.card 
+{
+    width: 430px;
+    padding: 35px;
+
+    background: rgba(36, 36, 36, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+
+    backdrop-filter: blur(30px);
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+h1 
+{
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: -1.5px;
+}
+
+p 
+{
+    margin-top: 5px;
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+input,
+textarea 
+{
+    width: 100%;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: rgba(255, 255, 255, 0.07);
+    color: white;
+
+    border-radius: 16px;
+    padding: 15px;
+
+    font-size: 15px;
+
+    transition: 0.25s ease;
+}
+
+input 
+{
+    margin-bottom: 14px;
+}
+
+textarea 
+{
+    height: 220px;
+    resize: none;
+    overflow-wrap: break-word;
+}
+
+input:focus,
+textarea:focus {
+    background: rgba(255, 255, 255, 0.11);
+    border-color: rgba(255, 255, 255, 0.25);
+
+    box-shadow: 0 0 0 4px rgba(80, 130, 255, 0.1);
+}
+
+button 
+{
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: white;
+
+    background: linear-gradient(135deg, #0a84ff, #5e5ce6);
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(10, 132, 255, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+button:hover 
+{
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+
+    box-shadow: 0 12px 35px rgba(10, 132, 255, 0.35);
+}
+
+button:active {
+    transform: scale(0.97);
+}
