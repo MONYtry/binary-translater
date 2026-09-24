@@ -3,11 +3,17 @@ function test()
     // Holt benötigte Elemente
     const data = document.getElementById("inputfield");
     const display = document.getElementById("display");
-
+    
     try 
     {
         // Versucht alle Buchstaben zu teilen
         var test = data.value.split('');
+        
+        // Verhindert Nullpointer
+        if (test.length == 0)
+        {
+            console.log("Kein Wert geben, abbruch!");
+        }
         
         // Setzt den Display zurück
         display.value = "";
