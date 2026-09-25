@@ -13,6 +13,7 @@ function test()
         if (test.length == 0)
         {
             console.log("Kein Wert geben, abbruch!");
+            return;
         }
         
         // Setzt den Display zurück
