@@ -74,6 +74,51 @@ function clearDisplay() {
     currentDisplay.length = 0;    
 }
 
+function binaryToText()
+{
+    const inputfield = document.getElementById("inputfield");
+    var binaryTextInput = inputfield.value.split(" ");
+
+    // Binary-Block
+    for (var i = 0; i < binaryTextInput.length; i++)
+    {
+        var Dezimalzahl = 0;
+
+        // Macht aus dem Block einzelne Nummern
+        var number = binaryTextInput[i].split("");
+        
+        // Binary-Numbers
+        for (var j = 0; j < bit.length; j++)
+        {
+            if (number[j] == 1)
+            {
+                Dezimalzahl += bit[j];
+            }
+        }
+        console.log(String.fromCharCode(Dezimalzahl));
+        currentDisplay.push(String.fromCharCode(Dezimalzahl));
+    }
+    addDisplay();
+}
+
+var textToBinary = true;
+function changeWay()
+{
+    clearDisplay();
+    textToBinary = !textToBinary;
+
+    var wayText = textToBinary ? "Text 🔁 Binary" : "Binary 🔁 Text"
+    document.getElementById("wayText").textContent = wayText;
+    
+    if (textToBinary)
+    {
+        document.getElementById("binarytransalteButton").onclick = startBinaryCalculation;
+        return;
+    }
+
+    document.getElementById("binarytransalteButton").onclick = binaryToText;
+}
+
 var isDE = false;
 function changeLanguage()
 {
@@ -101,6 +146,7 @@ function changeLanguage()
 
     applyLanguage(lang,translations);
 }
+
 
 function applyLanguage(lang, translations)
 {
