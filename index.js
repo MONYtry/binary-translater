@@ -1,4 +1,4 @@
-function test() 
+function startBinaryCalculation() 
 {
     // Holt benötigte Elemente
     const data = document.getElementById("inputfield");
@@ -42,6 +42,7 @@ function getBinary(currentChar)
 {
     // Bessere Übersicht
     clearDisplay();
+
     // Geht durch jeden verfügbaren Bit 
     for (let i = 0; i < bit.length; i++)
     {
@@ -71,4 +72,43 @@ function addDisplay() {
 
 function clearDisplay() {
     currentDisplay.length = 0;    
+}
+
+var isDE = false;
+function changeLanguage()
+{
+    const translations  = {
+        DE: 
+        {
+            title: "Maschinen Code Übersetzer",
+            textPlaceholder: "Gebe deinen Text an",
+            buttonPlaceholder: "🔁Übersetze"
+        },
+
+        EN: 
+        {
+            title: "Binary Translater",
+            textPlaceholder: "Enter your Text",
+            buttonPlaceholder: "🔁Translate"
+        }
+    };
+    
+    // Flips the bool 
+    isDE = !isDE;
+    
+    // Ternary Operator
+    const lang = isDE ? "DE" : "EN";
+
+    applyLanguage(lang,translations);
+}
+
+function applyLanguage(lang, translations)
+{
+    // Website
+    document.getElementById("website_title").textContent = translations[lang].title;
+    document.getElementById("inputfield").placeholder = translations[lang].textPlaceholder;
+    
+    // Buttons
+    document.getElementById("translateButton").textContent = lang;
+    document.getElementById("binarytransalteButton").textContent = translations[lang].buttonPlaceholder;
 }
