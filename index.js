@@ -157,7 +157,6 @@ function changeLanguage()
     // Flips the bool 
     isDE = !isDE;
     
-    
     applyLanguage();
 }
 
