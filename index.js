@@ -6,7 +6,10 @@ function startBinaryCalculation()
 {
     // Holt benötigte Elemente
     const raw_input = document.getElementById("inputfield");
-
+    
+    // Löscht alles
+    whipeData();
+    
     try 
     {
         // Versucht alle Buchstaben zu teilen
